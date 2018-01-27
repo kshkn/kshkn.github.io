@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>РСПСНИЕ</title>
+<script>
+window.render_schedule = function(data, tz) {
+  var date = new Date();
+  var lines = data.match(/[^\r\n]+/g);
+  var zone = tz||lines[1];
+  var times = [];
+  var locale = navigator.languages;
+  var date_options = { day: 'numeric', month: 'numeric' };
+  var time_options = { hour: '2-digit', minute: '2-digit', hour12: false };
+  for (var i=1; i<8; i+=1) {
+    times[i] = [];
+    var local = lines[i+1].replace(/(^|[^\d])(\d:\d\d)/g, '$10$2').replace(/(\d\d:\d\d)/g, function(match, substring) {
+      var date = new Date('2000-01-01T' + substring + zone);
+      var localdate = date.toLocaleTimeString(locale, time_options).replace(/(\d+:\d+):\d+ .*/, '$1');
+      times[i].push(localdate);
+      return localdate;
+    });
+    var td = document.getElementById('day'+i);
+    if (times[i][0] && times[i][1]) {
+      td.innerHTML = times[i][0];
+      td.nextSibling.innerHTML = '-';
+      td.nextSibling.nextSibling.innerHTML = times[i][1];
+    }else{
+      td.parentNode.removeChild(td.nextSibling.nextSibling);
+      td.parentNode.removeChild(td.nextSibling);
+      td.colSpan = "3";
+      td.className = "span3";
+      td.innerHTML = lines[i+1];
+    }
+  }
+  var td = document.getElementById('dates');
+  var date_a = new Date(lines[0]);
+  var date_b = new Date(date_a.getTime() + 6*24*60*60*1000);
+  td.innerHTML = date_a.toLocaleDateString(locale, date_options).replace(/ \d{4}.*$/, '');
+  td.nextSibling.innerHTML = ' - ' ;
+  td.nextSibling.nextSibling.innerHTML = date_b.toLocaleDateString(locale, date_options).replace(/ \d{4}.*$/, '');
+  td = document.getElementById('tz');
+  td.innerHTML = (" (UTC+"+(-date.getTimezoneOffset()/60)+")").replace("+-", "-").replace(".5", ":30");
+};
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'schedule.txt?'+(+new Date()));
+xhr.onload = function() {
+    if (xhr.status === 200) {
+        window.render_schedule(xhr.responseText);
+    }
+};
+xhr.send();
+</script>
+<style>
+@font-face {
+    font-family: 'novitonovathin';
+    src: url('novitonova-thin.woff2') format('woff2'),
+         url('novitonova-thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: 'novitonovathin';
+  font-size: 30px;
+  text-transform: uppercase;
+  background: #000;
+}
+body {
+  padding-top: 1px;
+  background: #666;
+  width: 320px;
+  height: 500px;
+  margin: 0 auto;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAlBAMAAAANYIJDAAAAGFBMVEUZFxg1NTcnJictLC0iISIcGxwgHx4xMTNgaE/vAAACUUlEQVQYGQXBO29cVRQG0JXx7KTl89icdhxipfUFQVoHBdHuPI7S2kKB+sSY+/dZS5J9y0hWkuSUldFoFE1J8nRcSdZYWafzlmQ2UKVhS06+bMlIMu5rWyut0eiiJLksX7axknHW71f2e5qmmUqSq9Kf9l/e7be4GVn3NFCtj5L8p0BRvmblDpMGLiR5hmrQX5P8YCqgqj9ayXNj0uhXSa5o/ty/o/xlrdxppVUrn5Oc0H2RZ7BZWecGqqnDWFlnlJ80DkOS+y4acMyeXEHPgveRrIcuCs08JiO5B8w+ZpeMKo0JaiXJlWbCP4mRU3erLspkS0ZyS2n96ZRlzyXVYKK3ZF9j3IIv71Yi65KidGvcrCRJ3nyb9TZJIrma6JoF+jHJSpKMjCQZkh9RTemp+zFJRjKSba0kQ3INDaV5lTUyRp6SPVkrw8p1o1XRzBdZ4/saGUmSjLeRXBcUFF4kuTskSbKP3F5E8lwNGsXHtXJ2yMgaya1DrPyIggKPSc7tU5LkN/M4jFwCgL7JyAMOb17/fqvqGCOnqVFNY0vSAMrLJRndTf397UG3WhlPXWYXRVlW1rnwcoxzURdjjaemS0HZZOQavP1XTz5m5USrVig3kpzA8ayw7clllarZqvFektxBUxyS5EoVADdGRi4BuFlJrlUBqEdJsv9KTcpFkuQZMLvx2T6SjHvVNdWWJLlTrTU9eWUkyTr9AcctyRo5A42pDzKykpx+/vDhdZKRPesMqls1R0mSJEmSJGtkPRRdKEXZk4y8G1kjY19Jkq4GCup/EzeBjcjRJLoAAAAASUVORK5CYII=);
+  background-repeat: repeat-x repeat-y;
+  padding: 15px;
+}
+table {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  border-collapse: collapse;
+}
+table td {
+  text-align: center;
+  padding: 0;
+  font-size: 36px;
+}
+table td:first-child {
+  text-align: right;
+  width: 12%;
+}
+table td:first-child + td {
+  text-align: right;
+  width: 34%;
+}
+table td:first-child + td + td {
+  width: 8%;
+}
+table td:first-child + td + td + td {
+  text-align: left;
+  width: 34%;
+}
+table td:last-child {
+  text-align: left;
+  width: 12%;
+}
+td.span3 {
+  text-align: center !important;
+  width: 76%;
+}
+tr.caption td {
+  text-align: center !important;
+  width: 100%;
+  font-size: 56px;
+  line-height: 32px;
+  padding-top: 6px;
+}
+tr.caption td small {
+  font-size: 42px;
+}
+tr.dates td {
+  font-size: 26px;
+  line-height: 22px;
+  padding-top: 6px;
+}
+tr:last-child td {
+  padding-bottom: 6px;
+}
+div {
+  background-color: rgba(0,0,0,0.4);
+  padding: 15px;
+  height: 100%;
+}
+</style>
+</head>
+
+<body>
+<div>
+<table>
+  <tr class="caption"><td colspan=5>Расписание<br><small>Schedule<span id="tz"></span></small></td></tr>
+  <tr class="dates"><td></td><td id="dates"></td><td></td><td></td><td></td></tr>
+  <tr class="times"><td>Пн</td><td id="day1"></td><td></td><td></td><td>Mo</td></tr>
+  <tr class="times"><td>Вт</td><td id="day2"></td><td></td><td></td><td>Te</td></tr>
+  <tr class="times"><td>Ср</td><td id="day3"></td><td></td><td></td><td>We</td></tr>
+  <tr class="times"><td>Чт</td><td id="day4"></td><td></td><td></td><td>Th</td></tr>
+  <tr class="times"><td>Пт</td><td id="day5"></td><td></td><td></td><td>Fr</td></tr>
+  <tr class="times"><td>Сб</td><td id="day6"></td><td></td><td></td><td>Sa</td></tr>
+  <tr class="times"><td>Вс</td><td id="day7"></td><td></td><td></td><td>Su</td></tr>
+</table>
+</div>
+</body>
+
+</html>
