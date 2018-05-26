@@ -64,7 +64,7 @@ for (var i in mirrors) {
           window.render_schedule(xhr.responseText);
       }
   };
-  xhr.send();
+  try { xhr.send(); } catch(e) {};
 }
 </script>
 <style>
