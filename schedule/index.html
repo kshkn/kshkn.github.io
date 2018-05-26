@@ -56,20 +56,22 @@ window.render_schedule = function(data, tz) {
 };
 
 var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/'];
-for (var i in mirrors) {
-  var img = document.body.appendChild(document.createElement("img"));
-  img.onload = function() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', mirrors[i] + '112167340?'+(+new Date()));
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-        window.render_schedule(xhr.responseText);
-      }
+document.onload = function() {
+  for (var i in mirrors) {
+    var img = document.body.appendChild(document.createElement("img"));
+    img.onload = function() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', mirrors[i] + '112167340?'+(+new Date()));
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          window.render_schedule(xhr.responseText);
+        }
+      };
+      xhr[i].send();
     };
-    xhr[i].send();
-  };
-  img.src = mirrors[i] + "robots.txt?" + (+new Date());
-}
+    img.src = mirrors[i] + "robots.txt?" + (+new Date());
+  }
+};
 </script>
 <style>
 @font-face {
