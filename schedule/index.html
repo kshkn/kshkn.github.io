@@ -67,7 +67,7 @@ window.onload = function() {
     img.onload = function() {
       document.body.removeChild(this);
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', this.src.replace('dot.gif', '112167340'));
+      xhr.open('GET', this.src.replace('kshkn.gif', '112167340'));
       xhr.onload = function() {
         if (xhr.status === 200) {
           window.render_schedule(xhr.responseText);
@@ -75,7 +75,7 @@ window.onload = function() {
       };
       xhr.send();
     };
-    img.src = mirrors[i] + "dot.gif?" + (+new Date());
+    img.src = mirrors[i] + "kshkn.gif?" + (+new Date());
   }
 };
 </script>
