@@ -67,7 +67,7 @@ window.onload = function() {
           window.render_schedule(xhr.responseText);
         }
       };
-      xhr[i].send();
+      xhr.send();
     };
     img.src = mirrors[i] + "dot.gif?" + (+new Date());
   }
