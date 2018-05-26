@@ -55,14 +55,17 @@ window.render_schedule = function(data, tz) {
   td.innerHTML = (" (UTC+"+(-date.getTimezoneOffset()/60)+")").replace("+-", "-").replace(".5", ":30");
 };
 
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://kshkn.herokuapp.com/112167340?'+(+new Date()));
-xhr.onload = function() {
-    if (xhr.status === 200) {
-        window.render_schedule(xhr.responseText);
-    }
-};
-xhr.send();
+var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/'];
+for (var i in mirrors) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', mirrors[i] + '112167340?'+(+new Date()));
+  xhr.onload = function() {
+      if (xhr.status === 200) {
+          window.render_schedule(xhr.responseText);
+      }
+  };
+  xhr.send();
+}
 </script>
 <style>
 @font-face {
