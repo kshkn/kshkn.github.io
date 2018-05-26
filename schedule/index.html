@@ -59,6 +59,8 @@ var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/'];
 window.onload = function() {
   for (var i in mirrors) {
     var img = document.body.appendChild(document.createElement("img"));
+    img.width = img.height = 1;
+    img.style.position = 'absolute';
     img.onerror = function() {
       document.body.removeChild(this);
     };
