@@ -1,9 +1,22 @@
 <!doctype html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0; url=https://kshkn.herokuapp.com/koshkamoroshka/live">
-  <script>window.location.href="https://kshkn.herokuapp.com/koshkamoroshka/live"</script>
+  <script>
+    var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/'];
+    for (var i in mirrors) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', mirrors[i] + '112167340?'+(+new Date()));
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          window.location.href = mirrors[i] + "koshkamoroshka/live";
+        }
+      };
+      xhr.send();
+    }
+  </script>
   <title>koshkamoroshka - Playlist</title>
 <body>
   The page you are looking for is here:
   <a href="https://kshkn.herokuapp.com/koshkamoroshka/live">kshkn.herokuapp.com/koshkamoroshka/live</a>
+  or here:
+  <a href="https://kshkn.ga/koshkamoroshka/live">kshkn.ga/koshkamoroshka/live</a>
