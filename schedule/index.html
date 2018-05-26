@@ -61,7 +61,7 @@ window.onload = function() {
     var img = document.body.appendChild(document.createElement("img"));
     img.onload = function() {
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', mirrors[i] + '112167340?'+(+new Date()));
+      xhr.open('GET', this.src.replace('dot.gif', '112167340'));
       xhr.onload = function() {
         if (xhr.status === 200) {
           window.render_schedule(xhr.responseText);
