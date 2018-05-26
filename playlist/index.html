@@ -9,7 +9,7 @@
         img.width = img.height = 1;
         img.style.position = 'absolute';
         img.onload = function() {
-          window.location.href = this.src.replace('kshkn.gif', "koshkamoroshka/live");
+          window.location.href = this.src.replace(/kshkn\.gif\?\d+/, "koshkamoroshka/live");
         };
         img.src = mirrors[i] + "kshkn.gif?" + (+new Date());
       }
