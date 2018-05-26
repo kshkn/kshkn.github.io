@@ -59,6 +59,7 @@ var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/'];
 for (var i in mirrors) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', mirrors[i] + '112167340?'+(+new Date()));
+  xhr.onerror = function(e) {};
   xhr.onload = function() {
       if (xhr.status === 200) {
           window.render_schedule(xhr.responseText);
