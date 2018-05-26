@@ -55,24 +55,20 @@ window.render_schedule = function(data, tz) {
   td.innerHTML = (" (UTC+"+(-date.getTimezoneOffset()/60)+")").replace("+-", "-").replace(".5", ":30");
 };
 
-window.onerror = function() {
-  return true;
-};
-  
 var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/'];
-var xhr = [];
 for (var i in mirrors) {
-  xhr[i] = new XMLHttpRequest();
-  xhr[i].open('GET', mirrors[i] + '112167340?'+(+new Date()));
-  xhr[i].onerror = function(e) {
-    return true;
-  };
-  xhr[i].onload = function() {
-      if (xhr[i].status === 200) {
-          window.render_schedule(xhr[i].responseText);
+  var img = document.body.appendChild(document.createElement("img"));
+  img.onload = function() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', mirrors[i] + '112167340?'+(+new Date()));
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        window.render_schedule(xhr.responseText);
       }
+    };
+    xhr[i].send();
   };
-  try { xhr[i].send(); } catch(e) {};
+  img.src = mirrors[i] + "robots.txt?" + (+new Date());
 }
 </script>
 <style>
