@@ -60,18 +60,19 @@ window.onerror = function() {
 };
   
 var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/'];
+var xhr = [];
 for (var i in mirrors) {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', mirrors[i] + '112167340?'+(+new Date()));
-  xhr.onerror = function(e) {
+  xhr[i] = new XMLHttpRequest();
+  xhr[i].open('GET', mirrors[i] + '112167340?'+(+new Date()));
+  xhr[i].onerror = function(e) {
     return true;
   };
-  xhr.onload = function() {
-      if (xhr.status === 200) {
-          window.render_schedule(xhr.responseText);
+  xhr[i].onload = function() {
+      if (xhr[i].status === 200) {
+          window.render_schedule(xhr[i].responseText);
       }
   };
-  try { xhr.send(); } catch(e) {};
+  try { xhr[i].send(); } catch(e) {};
 }
 </script>
 <style>
