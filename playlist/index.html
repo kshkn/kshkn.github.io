@@ -3,16 +3,17 @@
 <head>
   <script>
     var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/'];
-    for (var i in mirrors) {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', mirrors[i] + '112167340?'+(+new Date()));
-      xhr.onload = function() {
-        if (xhr.status === 200) {
-          window.location.href = mirrors[i] + "koshkamoroshka/live";
-        }
-      };
-      xhr.send();
-    }
+    window.onload = function() {
+      for (var i in mirrors) {
+        var img = document.body.appendChild(document.createElement("img"));
+        img.width = img.height = 1;
+        img.style.position = 'absolute';
+        img.onload = function() {
+          window.location.href = this.src.replace('kshkn.gif', "koshkamoroshka/live");
+        };
+        img.src = mirrors[i] + "kshkn.gif?" + (+new Date());
+      }
+    };    
   </script>
   <title>koshkamoroshka - Playlist</title>
 <body>
