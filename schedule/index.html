@@ -59,7 +59,11 @@ var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/'];
 window.onload = function() {
   for (var i in mirrors) {
     var img = document.body.appendChild(document.createElement("img"));
+    img.onerror = function() {
+      document.body.removeChild(this);
+    };
     img.onload = function() {
+      document.body.removeChild(this);
       var xhr = new XMLHttpRequest();
       xhr.open('GET', this.src.replace('dot.gif', '112167340'));
       xhr.onload = function() {
