@@ -55,11 +55,17 @@ window.render_schedule = function(data, tz) {
   td.innerHTML = (" (UTC+"+(-date.getTimezoneOffset()/60)+")").replace("+-", "-").replace(".5", ":30");
 };
 
+window.onerror = function() {
+  return true;
+};
+  
 var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/'];
 for (var i in mirrors) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', mirrors[i] + '112167340?'+(+new Date()));
-  xhr.onerror = function(e) {};
+  xhr.onerror = function(e) {
+    return true;
+  };
   xhr.onload = function() {
       if (xhr.status === 200) {
           window.render_schedule(xhr.responseText);
