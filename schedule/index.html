@@ -55,7 +55,7 @@ window.render_schedule = function(data, tz) {
   td.innerHTML = (" (UTC+"+(-date.getTimezoneOffset()/60)+")").replace("+-", "-").replace(".5", ":30");
 };
 
-var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/'];
+var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/', 'https://io.kshkn.ga'];
 window.onload = function() {
   for (var i in mirrors) {
     var img = document.body.appendChild(document.createElement("img"));
