@@ -17,6 +17,8 @@
 
 <script>
 window.render_schedule = function(data, tz) {
+  if (window.render_schedule_data) return;
+  window.render_schedule_data = data;
   var date = new Date();
   var lines = data.match(/[^\r\n]+/g);
   var zone = tz||lines[1];
