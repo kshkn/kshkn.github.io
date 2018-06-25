@@ -57,28 +57,15 @@ window.render_schedule = function(data, tz) {
   td.innerHTML = (" (UTC+"+(-date.getTimezoneOffset()/60)+")").replace("+-", "-").replace(".5", ":30");
 };
 
-var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/', 'https://io.kshkn.ga/'];
 window.onload = function() {
-  for (var i in mirrors) {
-    var img = document.body.appendChild(document.createElement("img"));
-    img.width = img.height = 1;
-    img.style.position = 'absolute';
-    img.onerror = function() {
-      document.body.removeChild(this);
-    };
-    img.onload = function() {
-      document.body.removeChild(this);
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', this.src.replace('kshkn.gif', '112167340'));
-      xhr.onload = function() {
-        if (xhr.status === 200) {
-          window.render_schedule(xhr.responseText);
-        }
-      };
-      xhr.send();
-    };
-    img.src = mirrors[i] + "kshkn.gif?" + (+new Date());
-  }
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://io.kshkn.ga/112167340');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      window.render_schedule(xhr.responseText);
+    }
+  };
+  xhr.send();
 };
 </script>
 <style>
