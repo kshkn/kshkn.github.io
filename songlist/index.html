@@ -1,25 +1,11 @@
 <!doctype html>
 <html>
 <head>
+  <meta http-equiv="refresh" content="0; url=https://io.kshkn.ga/koshkamoroshka/repertoire">
   <script>
-    var mirrors = ['https://kshkn.herokuapp.com/', 'https://kshkn.ga/', 'https://io.kshkn.ga/'];
-    window.onload = function() {
-      for (var i in mirrors) {
-        var img = document.body.appendChild(document.createElement("img"));
-        img.width = img.height = 1;
-        img.style.position = 'absolute';
-        img.onload = function() {
-          window.location.href = this.src.replace(/kshkn\.gif\?\d+/, "koshkamoroshka/repertoire");
-        };
-        img.src = mirrors[i] + "kshkn.gif?" + (+new Date());
-      }
-    };  
+    window.location.href = "https://io.kshkn.ga/koshkamoroshka/repertoire");
   </script>
   <title>koshkamoroshka - Songlist</title>
 <body>
   The page you are looking for is here:
-  <a href="https://kshkn.herokuapp.com/koshkamoroshka/repertoire">kshkn.herokuapp.com/koshkamoroshka/repertoire</a>
-  or here:
-  <a href="https://kshkn.ga/koshkamoroshka/repertoire">kshkn.ga/koshkamoroshka/repertoire</a>
-  or here:
   <a href="https://io.kshkn.ga/koshkamoroshka/repertoire">io.kshkn.ga/koshkamoroshka/repertoire</a>
