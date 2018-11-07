@@ -16,45 +16,59 @@
 <meta name="theme-color" content="#ffffff">
 
 <script>
-window.render_schedule = function(data, tz) {
-  if (window.render_schedule_data) return;
-  window.render_schedule_data = data;
-  var date = new Date();
-  var lines = data.match(/[^\r\n]+/g);
-  var zone = tz||lines[1];
-  var times = [];
+window.render_schedule = function(data) {
   var locale = navigator.languages;
   var date_options = { day: 'numeric', month: 'numeric' };
-  var time_options = { hour: '2-digit', minute: '2-digit', hour12: false };
-  for (var i=1; i<8; i+=1) {
-    times[i] = [];
-    var local = lines[i+1].replace(/(^|[^\d])(\d:\d\d)/g, '$10$2').replace(/(\d\d:\d\d)/g, function(match, substring) {
-      var date = new Date((new Date()).toISOString().split('T')[0] + 'T' + substring + zone);
-      var localdate = date.toLocaleTimeString(locale, time_options).replace(/(\d+:\d+):\d+ .*/, '$1');
-      times[i].push(localdate);
-      return localdate;
-    });
-    var td = document.getElementById('day'+i);
-    if (times[i][0] && times[i][1]) {
-      td.innerHTML = times[i][0];
+  var time_options = { hour: '2-digit', minute: '2-digit' };
+
+  var lines = data.toString().replace(/^\s+|\s+$/g, '').replace(/^[  ]+|[  ]+$/gm, '').split(/\r\n|\n|\r/);
+
+  var date_a = lines[0].match(/^\d\d\d\d-\d\d-\d\d$/) ? new Date(lines[0]) : new Date();
+  var date_b = new Date(date_a.getTime() + 6*24*60*60*1000);
+  var td = document.getElementById('dates');
+  td.innerHTML = date_a.toLocaleDateString(locale, date_options).replace(/ \d{4}.*$/, '');
+  td.nextSibling.nextSibling.innerHTML = date_b.toLocaleDateString(locale, date_options).replace(/ \d{4}.*$/, '');
+
+  var zone = (lines[1] && lines[1].match(/^[+-]\d\d:\d\d$/)) || "+00:00";
+  td = document.getElementById('tz');
+  td.innerHTML = (" (UTC+"+(-(new Date()).getTimezoneOffset()/60)+")").replace("+-", "-").replace(".5", ":30");
+
+  for (var i = 1; i < lines.length - 1; i += 1) {
+    var local = lines[i+1].
+      replace(/(\d{1,2})(:\d\d)?\s*([aApP][mM])/g, function(match, hours, minutes, ampm) {
+        hours = parseInt(hours, 10);
+        if (ampm.toLowerCase() == 'am' && hours == 12) hours = 0;
+        if (ampm.toLowerCase() == 'pm' && hours < 12) hours += 12;
+        return hours.toString() + (minutes || ":00");
+      }).
+      replace(/(^|[^\d])(\d:\d\d)/g, '$10$2').
+      replace(/(\d\d:\d\d)/g, function(match, time) {
+        var date = new Date((new Date()).toISOString().split('T')[0] + 'T' + time + zone);
+        return date.toLocaleTimeString(locale, time_options).replace(/(\d+:\d+):\d+ .*/, '$1').replace(/:00\s*([aApP][mM])/, ' $1');
+      });
+    td = document.getElementById('day'+i);
+    if (!td) continue;
+    if (local.match('-')) {
+      var times = local.split('-')
+      if (td.colSpan == 3) {
+        td.colSpan = "";
+        td.className = "";
+        td.parentNode.insertCell(2);
+        td.parentNode.insertCell(2);
+      }
+      td.innerHTML = times[0];
       td.nextSibling.innerHTML = '-';
-      td.nextSibling.nextSibling.innerHTML = times[i][1];
+      td.nextSibling.nextSibling.innerHTML = times[1];
     }else{
-      td.parentNode.removeChild(td.nextSibling.nextSibling);
-      td.parentNode.removeChild(td.nextSibling);
-      td.colSpan = "3";
-      td.className = "span3";
-      td.innerHTML = lines[i+1];
+      if (td.colSpan != 3) {
+        td.parentNode.deleteCell(2);
+        td.parentNode.deleteCell(2);
+        td.colSpan = 3;
+        td.className = "span3";
+      }
+      td.innerHTML = local;
     }
   }
-  var td = document.getElementById('dates');
-  var date_a = new Date(lines[0]);
-  var date_b = new Date(date_a.getTime() + 6*24*60*60*1000);
-  td.innerHTML = date_a.toLocaleDateString(locale, date_options).replace(/ \d{4}.*$/, '');
-  td.nextSibling.innerHTML = ' - ' ;
-  td.nextSibling.nextSibling.innerHTML = date_b.toLocaleDateString(locale, date_options).replace(/ \d{4}.*$/, '');
-  td = document.getElementById('tz');
-  td.innerHTML = (" (UTC+"+(-date.getTimezoneOffset()/60)+")").replace("+-", "-").replace(".5", ":30");
 };
 
 window.onload = function() {
