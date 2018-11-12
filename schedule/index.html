@@ -25,6 +25,13 @@ window.render_schedule = function(data) {
 
   var date_a = lines[0].match(/^\d\d\d\d-\d\d-\d\d$/) ? new Date(lines[0]) : new Date();
   var date_b = new Date(date_a.getTime() + 6*24*60*60*1000);
+  var date_today = new Date();
+  if (date_today >= date_a && date_today <= date_b) {
+    var day_number = date_today.getDay();
+    if (day_number == 0) day_number += 7;
+    var today_cell = document.getElementById('day' + day_number);
+    if (today_cell) today_cell.parentNode.className += ' active';
+  }
   var td = document.getElementById('dates');
   td.innerHTML = date_a.toLocaleDateString(locale, date_options).replace(/ \d{4}.*$/, '');
   td.nextSibling.nextSibling.innerHTML = date_b.toLocaleDateString(locale, date_options).replace(/ \d{4}.*$/, '');
@@ -166,6 +173,21 @@ div {
   background-color: rgba(0,0,0,0.4);
   padding: 15px;
   height: 100%;
+}
+tr.active td:first-child:after {
+  font-size: 0.5rem;
+  content: '♥';
+  position: absolute;
+  margin-top: 0.5rem;
+  text-align: right;
+  margin-left: -1rem;
+}
+tr.active td:last-child:after {
+  font-size: 0.5rem;
+  content: '♥';
+  position: absolute;
+  margin-top: 0.5rem;
+  margin-left: 0.1rem;
 }
 </style>
 </head>
