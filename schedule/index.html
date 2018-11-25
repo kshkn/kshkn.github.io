@@ -24,9 +24,9 @@ window.render_schedule = function(data) {
   var lines = data.toString().replace(/^\s+|\s+$/g, '').replace(/^[  ]+|[  ]+$/gm, '').split(/\r\n|\n|\r/);
 
   var date_a = lines[0].match(/^\d\d\d\d-\d\d-\d\d$/) ? new Date(lines[0]) : new Date();
-  var date_b = new Date(date_a.getTime() + 7*24*60*60*1000);
+  var date_b = new Date(date_a.getTime() + 6*24*60*60*1000);
   var date_today = new Date();
-  if (date_today >= date_a && date_today < date_b) {
+  if (date_today >= date_a && date_today < date_b + 24*60*60*1000) {
     var day_number = date_today.getDay();
     if (day_number == 0) day_number += 7;
     var today_cell = document.getElementById('day' + day_number);
