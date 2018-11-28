@@ -177,25 +177,17 @@ div {
   padding: 15px;
   height: 100%;
 }
-tr.active td:first-child:after {
-  font-size: 0.5rem;
-  content: '♥';
-  line-height: 1.6rem;
-  vertical-align: top;
-  margin-bottom: -1.6rem;
+tr.active td:first-child:before, tr.active td:last-child:after {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAc0lEQVQoz2P4//8/A6kYmSMAxPVQrIAkVoAmhqLp/H8EeA9VhC4mgKzJ4T8mOI9FzAFZk8J/4oADuvP2E9BwH5ufFKDuxmsLuiYQDsChoR5XkMNwP5qG/fjiCVvww4OZGE2wKCgglCLQ8XxikhE6FsAlBwABgjTX6wup3AAAAABJRU5ErkJggg==');
+  content: '';
   display: inline-block;
   position: absolute;
-  margin-left: -1rem;
+  width: 13px;
+  height: 13px;
+  margin-top: 0.6rem;
 }
-tr.active td:last-child:after {
-  font-size: 0.5rem;
-  content: '♥';
-  line-height: 1.6rem;
-  vertical-align: top;
-  margin-bottom: -1.6rem;
-  display: inline-block;
-  position: absolute;
-  margin-left: 0.1rem;
+tr.active td:first-child:before {
+  margin-left: -13px;
 }
 </style>
 </head>
