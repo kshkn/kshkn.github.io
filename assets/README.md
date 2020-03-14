@@ -23,3 +23,15 @@ Big thanks to Dmitriy 3axap for making 2 color background
 <img src="tg_bg-02.png" alt="koshkamoroshka background image dark"><br>
 
 <a href="tg_bg.ai">tg_bg.ai</a><br>
+
+---------------------
+
+### Girl with guitar
+
+Original art by [koshkamoroshka](https://vk.com/koshkamoroshka), vectorized by [NGORT](https://vk.com/id3285428)
+
+<img src="юлька.png" alt="koshkamoroshka girl with guitar"><br>
+
+<img width=50% src="girl with guitar bw.svg" alt="koshkamoroshka girl with guitar in vector, black and white"><br>
+
+<img width=50% src="girl with guitar colored.svg" alt="koshkamoroshka girl with guitar in vector, colored"><br>
