@@ -7,10 +7,10 @@
 4) [Тишина](https://github.com/kshkn/lyrics/blob/master/%D1%82%D0%B8%D1%88%D0%B8%D0%BD%D0%B0.md) `4:40`  
 
 Links: 
-[Youtube](https://www.youtube.com/playlist?list=OLAK5uy_kcRMaU2LCwbNHpaukXWHii4PVHO6NHk3Q)
 [Spotify](https://open.spotify.com/album/2Qx06CwfQNjZp9wpuPDgk2)
 [Google Play](https://play.google.com/store/music/album/%D0%AE%D0%BB%D1%8F_%D0%9A%D0%BE%D1%88%D0%BA%D0%B8%D0%BD%D0%B0_%D0%92%D1%80%D0%B5%D0%BC%D1%8F?id=Bw5p7c7yfykhfpz5j5kttwhzzvq)
 [Apple Music](https://music.apple.com/ru/album/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-ep/1516294631)
+[Youtube](https://www.youtube.com/playlist?list=OLAK5uy_kcRMaU2LCwbNHpaukXWHii4PVHO6NHk3Q)
 
 #### Три зимних песни
 29 December 2019
