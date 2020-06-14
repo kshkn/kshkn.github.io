@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Discography
+description: Discography of Julia Koshkina
+keywords: [koshkamoroshka,Julia Koshkina,discography,кошка морошка,Юля Кошкина,дискография]
+image: latest.jpg
 ---
 
 ### Время
