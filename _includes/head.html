@@ -8,9 +8,8 @@
   <meta property="og:title" content="{% if page.ogtitle %}{{ page.ogtitle }}{% else %}{{ page.title }}{% endif %}">
   <meta property="og:description" content="{% if page.ogdescription %}{{ page.ogdescription }}{% else %}{{ page.description }}{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <meta property="og:image" content="{{ "/public/img/" | prepend: site.baseurl | prepend: site.url }}{{ page.ogimage }}">
-
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/public/img/{{ page.ogimage }}">
   <title>
     {% if page.title == "Home" %}
       {{ site.title }} &middot; {{ site.tagline }}
@@ -18,17 +17,15 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
-
   {% if page.description %}
-  <meta name="description" content="{{ page.description | escape }}. {{ page.ogdescription | escape }}">
+  <meta name="description" content="{{ page.description }}. {{ page.ogdescription }}">
   {% endif %}
-  {%if page.keywords %}
-  <meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}"/>
-  {%endif %}
-
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/hyde.css">
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords | join: ', ' }}"/>
+  {% endif %}
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
   <style>
   @font-face {
       font-family: 'novitonovathin';
@@ -37,8 +34,6 @@
       font-style: normal;
   }
   </style>
-
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl }}apple-touch-icon.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}favicon.ico">
-
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
 </head>
