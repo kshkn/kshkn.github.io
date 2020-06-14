@@ -3,7 +3,9 @@ layout: page
 title: Discography
 description: Discography of Julia Koshkina
 keywords: [koshkamoroshka,Julia Koshkina,discography,кошка морошка,Юля Кошкина,дискография]
-image: latest.jpg
+ogtitle: Discography
+ogdescription: Listen to Julia's music on Spotify, Apple Music and Google Play
+ogimage: latest.jpg
 ---
 
 ### Время
