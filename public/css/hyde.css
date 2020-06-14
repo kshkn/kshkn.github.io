@@ -313,9 +313,22 @@ a[href^="https://github.com/"][href$=".md"]:before {
   margin: -0.1rem 0.2rem 0 0.6rem;
   background: url(/public/img/github-brands.svg) 0 0 no-repeat;
 }
+p a:first-child:before {
+  margin-left: 0;
+}
 li a, h3 a, h4 a, h5 a {
   opacity: 0.1;
 }
 li a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
   opacity: 0.9;
+}
+h3 + p {
+  margin-bottom: 0.5rem;
+}
+h3 + p + p {
+  font-size: 0.7em;
+}
+h3 + p + ol + p {
+  font-size: 0.7em;
+  margin-top: -0.5rem;
 }
