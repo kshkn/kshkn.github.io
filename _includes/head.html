@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:image" content="{{ site.url }}/public/img/{{ page.ogimage }}">
-  <title>{{ site.title }} | {{ page.title }}</title>
+  <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{% if page.url == '/' %}{{ site.description }}{% else %}{{ page.description }}. {{ page.ogdescription }}{% endif %}">
   <meta name="keywords" content="{{ page.keywords | join: ', ' }}"/>
   <link rel="stylesheet" href="/public/css/poole.css">
