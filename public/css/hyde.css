@@ -280,31 +280,31 @@ a[href^="https://open.spotify.com/"]:before {
   height: 1rem; width: 1rem;
   vertical-align: middle;
   margin: -0.1rem 0.2rem 0 0.6rem;
-  background: url(/public/img/spotify-brands.svg) 0 0 no-repeat;
+  background: url(/public/img/spotify.svg) 0 0 no-repeat;
 }
 a[href^="https://play.google.com/"]:before {
   content: "";
   display: inline-block;
   height: 1rem; width: 1rem;
   vertical-align: middle;
-  margin: -0.1rem 0.3rem 0 0.6rem;
-  background: url(/public/img/google-play-brands.svg) 0 0 no-repeat;
+  margin: -0.1rem 0.2rem 0 0.6rem;
+  background: url(/public/img/googleplay.svg) 0 0 no-repeat;
 }
 a[href^="https://music.apple.com/"]:before {
   content: "";
   display: inline-block;
   height: 1rem; width: 1rem;
   vertical-align: middle;
-  margin: -0.3rem 0rem 0 0.6rem;
-  background: url(/public/img/apple-brands.svg) 0 0 no-repeat;
+  margin: -0.3rem 0.1rem 0 0.6rem;
+  background: url(/public/img/apple.svg) 0 0 no-repeat;
 }
 a[href^="https://www.youtube.com/"]:before {
   content: "";
   display: inline-block;
   height: 1rem; width: 1rem;
   vertical-align: middle;
-  margin: 0 0.3rem 0 0.6rem;
-  background: url(/public/img/youtube-brands.svg) 0 0 no-repeat;
+  margin: -0.1rem 0.2rem 0 0.6rem;
+  background: url(/public/img/youtube.svg) 0 0 no-repeat;
 }
 a[href^="https://github.com/"][href$=".md"]:before {
   content: "";
@@ -312,7 +312,7 @@ a[href^="https://github.com/"][href$=".md"]:before {
   height: 1rem; width: 1rem;
   vertical-align: middle;
   margin: -0.1rem 0.2rem 0 0.6rem;
-  background: url(/public/img/github-brands.svg) 0 0 no-repeat;
+  background: url(/public/img/github.svg) 0 0 no-repeat;
 }
 p a:first-child:before {
   margin-left: 0;
