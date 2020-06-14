@@ -322,13 +322,7 @@ li a, h3 a, h4 a, h5 a {
 li a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
   opacity: 0.9;
 }
-h3 + p {
-  margin-bottom: 0.5rem;
-}
-h3 + p + p {
-  font-size: 0.7em;
-}
-h3 + p + ol + p {
-  font-size: 0.7em;
-  margin-top: -0.5rem;
+h3 + p + p, h3 + p + ol + p {
+  font-size: 0.8em;
+  margin-bottom: 2rem;
 }
