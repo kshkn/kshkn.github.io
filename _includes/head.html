@@ -10,19 +10,9 @@
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:image" content="{{ site.url }}/public/img/{{ page.ogimage }}">
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-  </title>
-  {% if page.description %}
-  <meta name="description" content="{{ page.description }}. {{ page.ogdescription }}">
-  {% endif %}
-  {% if page.keywords %}
+  <title>{{ site.title }} | {{ page.title }}</title>
+  <meta name="description" content="{% if page.url == '/' %}{{ site.description }}{% else %}{{ page.description }}. {{ page.ogdescription }}{% endif %}">
   <meta name="keywords" content="{{ page.keywords | join: ', ' }}"/>
-  {% endif %}
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
@@ -34,6 +24,25 @@
       font-style: normal;
   }
   </style>
+  <script type="application/ld+json">{
+   "sameAs":[
+      "{{ site.social.links || join: '", "' }}"
+   ],
+   "@type":"WebSite",
+   "image":"{{ site.url }}{{ site.logo }}",
+   "url":"{{ site.origin }}",
+   "publisher":{
+      "@type":"Organization",
+      "logo":{
+         "@type":"ImageObject",
+         "url":"{{ site.url }}{{ site.logo }}"
+      }
+   },
+   "name":"{{ site.title }}",
+   "headline":"{{ site.headline }}",
+   "description":"{{ site.description }}",
+   "@context":"https://schema.org"
+  }</script>
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon.png">
   <link rel="shortcut icon" href="/favicon.ico">
 </head>

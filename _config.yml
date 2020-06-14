@@ -1,4 +1,13 @@
 title: Julia Koshkina
-description: Siberian singer and songwriter
-permalink: pretty
-baseurl: /
+headline: Siberian singer and songwriter
+description: Julia Koshkina is a Siberian singer and songwriter. She streams on Twitch as koshkamoroshka. Listen to her music on Spotify, Apple Music and Google Play
+social:
+  links:
+    - https://www.twitch.tv/koshkamoroshka
+    - https://discord.gg/koshkamoroshka
+    - https://vk.com/koshkamoroshka
+    - https://www.youtube.com/koshkamoroshka
+    - https://www.instagram.com/_koshkamoroshka/
+    - https://patreon.com/koshkamoroshka
+    - https://koshkamoroshka.com/live
+logo: /public/img/logo.png
