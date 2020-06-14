@@ -59,7 +59,7 @@ html {
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.7);
-  Rbackground-color: #202020;
+  font-weight: lighter;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -83,6 +83,7 @@ html {
   margin-top: 0;
   font-family: "novitonovathin", serif;
   font-size: 4rem;
+  font-weight: lighter;
   text-transform: uppercase;
 }
 
