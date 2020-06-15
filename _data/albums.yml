@@ -1,0 +1,71 @@
+--- # Albums
+
+- title: Время
+  date: 2020-05-08
+  links:
+    Spotify:     https://open.spotify.com/album/2Qx06CwfQNjZp9wpuPDgk2
+    Google Play: https://play.google.com/store/music/album/%D0%AE%D0%BB%D1%8F_%D0%9A%D0%BE%D1%88%D0%BA%D0%B8%D0%BD%D0%B0_%D0%92%D1%80%D0%B5%D0%BC%D1%8F?id=Bw5p7c7yfykhfpz5j5kttwhzzvq
+    Apple Music: https://music.apple.com/ru/album/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-ep/1516294631
+    YouTube:     https://www.youtube.com/playlist?list=OLAK5uy_kcRMaU2LCwbNHpaukXWHii4PVHO6NHk3Q
+  tracks:
+    - title: Часы
+      length: '4:41'
+      links:
+        Spotify:     https://open.spotify.com/track/3nQYNkkM8ERJ2VNTX3Hxcw
+        Google Play: https://play.google.com/music/preview/Te52zwkvxc2yr5roqbbrs5vxbtu
+        Apple Music: https://music.apple.com/ru/album/%D1%87%D0%B0%D1%81%D1%8B/1516294631?i=1516294634
+        YouTube:     https://www.youtube.com/watch?v=U-rcTUegrv8
+        GitHub:      https://github.com/kshkn/lyrics/blob/master/%D1%87%D0%B0%D1%81%D1%8B.md
+    - title: Дельфины
+      length: '4:36'
+      links:
+        Spotify:     https://open.spotify.com/track/1MXV5Rkl5VwlgjQOulmLhY
+        Google Play: https://play.google.com/music/m/Tg7pr6dzoynqg5k24igah5wyf2q
+        Apple Music: https://music.apple.com/ru/album/%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D0%BD%D1%8B/1516294631?i=1516294635
+        YouTube:     https://www.youtube.com/watch?v=2ms3Ec8Riks
+        GitHub:      https://github.com/kshkn/lyrics/blob/master/%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D0%BD%D1%8B.md
+    - title: Весна
+      length: '4:49'
+      links:
+        Spotify:     https://open.spotify.com/track/4ZNnFhL9osZM77mSP1W8kR
+        Google Play: https://play.google.com/music/m/Tyrh7ubvzgvyx6uazymlizqvu5i
+        Apple Music: https://music.apple.com/ru/album/%D0%B2%D0%B5%D1%81%D0%BD%D0%B0/1516294631?i=1516294636
+        YouTube:     https://www.youtube.com/watch?v=E7pykoTJn50
+        GitHub:      https://github.com/kshkn/lyrics/blob/master/%D0%B2%D0%B5%D1%81%D0%BD%D0%B0.md
+    - title: Тишина
+      length: '4:40'
+      links:
+        Spotify:     https://open.spotify.com/track/7zrIyOjBrdc5LTS1s2qaT6?si=4rnZHqKTQXes745oZcc5iw
+        Google Play: https://play.google.com/music/m/Tzzwcxz45kdafbofojtxbbyl5ki
+        Apple Music: https://music.apple.com/ru/album/%D1%82%D0%B8%D1%88%D0%B8%D0%BD%D0%B0/1516294631?i=1516294637
+        YouTube:     https://www.youtube.com/watch?v=jllAATi44ak
+        GitHub:      https://github.com/kshkn/lyrics/blob/master/%D1%82%D0%B8%D1%88%D0%B8%D0%BD%D0%B0.md
+
+- title: Три зимних песни
+  date: 2019-12-29
+  links:
+    Spotify:     https://open.spotify.com/album/2nqOrWEXmZfav4Z5OMZjpw
+    Google Play: https://play.google.com/store/music/album/%D0%AE%D0%BB%D1%8F_%D0%9A%D0%BE%D1%88%D0%BA%D0%B8%D0%BD%D0%B0_%D0%A2%D1%80%D0%B8_%D0%B7%D0%B8%D0%BC%D0%BD%D0%B8%D1%85_%D0%BF%D0%B5%D1%81%D0%BD%D0%B8?id=Bsu6tvpi4v4umxkubugnrcplmqi
+    Apple Music: https://music.apple.com/ru/album/%D1%82%D1%80%D0%B8-%D0%B7%D0%B8%D0%BC%D0%BD%D0%B8%D1%85-%D0%BF%D0%B5%D1%81%D0%BD%D0%B8-single/1495316563
+  tracks:
+    - title: Снежинка
+      length: '3:34'
+      links:
+        Spotify:     https://open.spotify.com/track/0SoOwTBtJfdXv6Z5dw13Fp
+        Google Play: https://play.google.com/music/m/Txbqsv2pgfu5zqoodskv25ntyju
+        Apple Music: https://music.apple.com/ru/album/%D1%81%D0%BD%D0%B5%D0%B6%D0%B8%D0%BD%D0%BA%D0%B0/1495316563?i=1495316567
+        GitHub:      https://github.com/kshkn/lyrics/blob/master/%D1%81%D0%BD%D0%B5%D0%B6%D0%B8%D0%BD%D0%BA%D0%B0.md
+    - title: Вьюга
+      length: '4:38'
+      links:
+        Spotify:     https://open.spotify.com/track/5zb6qenEnXDHJGFkQPltSX
+        Google Play: https://play.google.com/music/m/Tzccbvoml3teobqyh7oxthqt4wy
+        Apple Music: https://music.apple.com/ru/album/%D0%B2%D1%8C%D1%8E%D0%B3%D0%B0/1495316563?i=1495316570
+        GitHub:      https://github.com/kshkn/lyrics/blob/master/%D0%B2%D1%8C%D1%8E%D0%B3%D0%B0.md
+    - title: Патефон
+      length: '3:01'
+      links:
+        Spotify:     https://open.spotify.com/track/1vKy67oi6FqjXqunGo8aVY
+        Google Play: https://play.google.com/music/m/Tfmnmzltvzrgir53hg4gtcskp6u
+        Apple Music: https://music.apple.com/ru/album/%D0%BF%D0%B0%D1%82%D0%B5%D1%84%D0%BE%D0%BD/1495316563?i=1495316571
+        GitHub:      https://github.com/kshkn/lyrics/blob/master/%D0%BF%D0%B0%D1%82%D0%B5%D1%84%D0%BE%D0%BD.md
