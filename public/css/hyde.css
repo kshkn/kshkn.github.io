@@ -247,7 +247,7 @@ h3 > code, h4 > code, h5 > code {
   position: absolute;
   z-index: -1;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient( rgba(0,0,0,0.1), rgba(0, 0, 0, 0.2) ), url(/public/img/bk.jpg) center center;
+  background: linear-gradient( rgba(0,0,0,0.1), rgba(0, 0, 0, 0.2) ), url(/public/img/bk2021-1280.jpg) 5% 5%;
   background-color: transparent !important;
 }
 .sidebar-sticky {
