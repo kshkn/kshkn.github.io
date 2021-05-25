@@ -64,6 +64,8 @@ html {
     width: 18rem;
     text-align: left;
   }
+}
+@media (max-width: 47.999em) {
   .sidebar:before {
     background-size: 200%;
   }
