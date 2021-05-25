@@ -5,7 +5,7 @@ description: Discography of Julia Koshkina
 keywords: [koshkamoroshka,Julia Koshkina,discography,кошка морошка,Юля Кошкина,дискография]
 ogtitle: Discography
 ogdescription: Listen to Julia's music on Spotify, Apple Music and YouTube
-ogimage: latest.jpg
+ogimage: bk2021-640.jpg
 ---
 
 {% for album in site.data.albums %}
