@@ -65,11 +65,6 @@ html {
     text-align: left;
   }
 }
-@media (max-width: 47.999em) {
-  .sidebar:before {
-    background-size: 200%;
-  }
-}
 
 /* Sidebar links */
 .sidebar a {
@@ -316,3 +311,9 @@ h3 + p + p, h3 + p + ol + p {
     background-size: cover;
   }
 }
+@media (max-width: 47.999em) {
+  .sidebar:before {
+    background-size: 200% !important;
+  }
+}
+
