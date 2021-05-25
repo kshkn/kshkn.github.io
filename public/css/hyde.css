@@ -64,6 +64,9 @@ html {
     width: 18rem;
     text-align: left;
   }
+  .sidebar:before {
+    background-size: 200%;
+  }
 }
 
 /* Sidebar links */
