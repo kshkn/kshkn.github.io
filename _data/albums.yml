@@ -1,5 +1,27 @@
 --- # Albums
 
+- title: До весны
+  date: 2021-05-26
+  links:
+    YouTube:     https://www.youtube.com/playlist?list=OLAK5uy_nImOx-th0gMn59eZXjyoJ3Q-tHeO2Sv_M
+  tracks:
+    - title: Останься
+      length: '4:22'
+      links:
+        YouTube:     https://www.youtube.com/watch?v=1whq4CD4kO0
+    - title: Трава
+      length: '3:17'
+      links:
+        YouTube:     https://www.youtube.com/watch?v=5JWCZQUzhDE
+    - title: Печаль
+      length: '3:43'
+      links:
+        YouTube:     https://www.youtube.com/watch?v=Hx_gKsufb2A
+    - title: Полнолуние
+      length: '3:37'
+      links:
+        YouTube:     https://www.youtube.com/watch?v=1rTT8uTue38
+
 - title: Время
   date: 2020-05-08
   links:
