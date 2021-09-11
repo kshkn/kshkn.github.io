@@ -285,6 +285,14 @@ a[href^="https://www.youtube.com/"]:before {
   margin: -0.1rem 0.2rem 0 0.6rem;
   background: url(/public/img/youtube.svg) 0 0 no-repeat;
 }
+a[href^="https://music.youtube.com/"]:before {
+  content: "";
+  display: inline-block;
+  height: 1rem; width: 1rem;
+  vertical-align: middle;
+  margin: -0.1rem 0.2rem 0 0.6rem;
+  background: url(/public/img/youtube-music.svg) 0 0 no-repeat;
+}
 a[href^="https://github.com/"][href$=".md"]:before {
   content: "";
   display: inline-block;
