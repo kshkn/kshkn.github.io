@@ -1,0 +1,70 @@
+---
+layout: page
+title: Discography
+description: Discography of Julia Koshkina
+keywords: [koshkamoroshka,Julia Koshkina,discography,кошка морошка,Юля Кошкина,дискография]
+ogtitle: Discography
+ogdescription: Listen to Julia's music on Spotify, Apple Music and YouTube
+ogimage: bk2021-640.jpg
+order: 1
+---
+
+<main id="discography" class="discography content container anchor">
+<header>
+<h1 class="page-title">{{ page.title }}</h1>
+</header>
+
+<section class="albums">
+
+  {% for album in site.data.albums %}
+
+    <article class="album">
+      <header>
+      <h3> {{ album.title }} </h3>
+      <em> {{ album.date | date: "%-d %B %Y" }} </em>
+      </header>
+
+      <ol class="tracks">
+        {% for track in album.tracks -%}
+        <li class="track">
+          {{ track.title }} <code>{{ track.length }}</code>
+          {% for tags in track.links -%}
+            <a href="{{ tags[1] }}" target="_blank"></a>
+          {% endfor -%}
+        </li>
+        {% endfor %}
+      </ol>
+
+      <footer>
+      {% for tags in album.links -%}
+      <a href="{{ tags[1] }}" target="_blank">{{ tags[0] }}</a>
+      {% endfor -%}
+      </footer>
+    </article>
+
+  {% endfor %}
+
+</section>
+
+<section class="singles">
+  <header>
+  <h2> Singles </h2>
+  </header>
+
+  {% for single in site.data.singles %}
+    <article class="album">
+      <header>
+      <h3> {{ single.title }} <code>{{ single.length }}</code> <a href="{{ single.links.GitHub }}" target="_blank"></a> </h3>
+      <em> {{ single.date | date: "%-d %B %Y" }} </em>
+      </header>
+
+      <footer>
+      {% for tags in single.links -%}
+      {% if tags[0] != 'GitHub' %} <a href="{{ tags[1] }}" target="_blank">{{ tags[0] }}</a> {% endif %}
+      {% endfor -%}
+      </footer>
+    </article>
+  {% endfor %}
+</section>
+
+</main>

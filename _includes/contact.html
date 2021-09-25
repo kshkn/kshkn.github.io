@@ -1,0 +1,19 @@
+{% for section in site.data.contacts %}
+
+<section class="chapter chapter-{{ forloop.index }}">
+  <header>
+  <h3>{{ section.title }}</h3>
+  </header>
+
+  {% for link in section.links %}
+
+  <article class="{{ link[0] }}">
+  <i class="fa fa-{{ link[0] }}"></i>
+  <a href="{{ link[1] }}">{{ link[1] | replace: "https://", "" | replace: "mailto:", "" }}</a>
+  </article>
+
+  {% endfor %}
+
+</section>
+
+{% endfor %}

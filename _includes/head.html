@@ -16,7 +16,6 @@
   <meta name="google-site-verification" content="_X6oew9Xos2SosIaKFlm4rMv4p9UHq6iMwyBHScl2Hk" />
   <meta name="yandex-verification" content="29f61831ed3c04ca" />
   <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css?v=202109110">
   <style>
   @font-face {
@@ -81,6 +80,17 @@
    "description":"{{ site.description }}",
    "@context":"https://schema.org"
   }</script>
+  <script type="application/javascript">
+    window.addEventListener('scroll', function() {
+      var stickyHeader = document.getElementById('sticky-sidebar');
+      var stuckClass = " half-stuck";
+      if (this.scrollY > 150) {
+        if (stickyHeader && stickyHeader.className.indexOf(stuckClass) == -1) stickyHeader.className += stuckClass;
+      }else{
+        if (stickyHeader) stickyHeader.className = stickyHeader.className.replace(stuckClass, "");
+      }
+    });
+  </script>
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon.png">
   <link rel="shortcut icon" href="/favicon.ico">
 </head>

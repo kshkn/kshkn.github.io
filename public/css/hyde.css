@@ -75,7 +75,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "novitonovathin", serif;
+  font-family: "novitonovathin", "Open Sans Condensed", "PT Sans", Helvetica, Arial, sans-serif;
   font-size: 4rem;
   font-weight: lighter;
   text-transform: uppercase;
@@ -253,6 +253,7 @@ h3 > code, h4 > code, h5 > code {
 .sidebar-sticky {
   background-color: rgba(0,0,0,0.5);
 }
+
 a[href^="https://open.spotify.com/"]:before {
   content: "";
   display: inline-block;
@@ -301,6 +302,7 @@ a[href^="https://github.com/"][href$=".md"]:before {
   margin: -0.1rem 0.2rem 0 0.6rem;
   background: url(/public/img/github.svg) 0 0 no-repeat;
 }
+
 p a:first-child:before {
   margin-left: 0;
 }
@@ -322,5 +324,110 @@ h3 + p + p, h3 + p + ol + p {
 @media (min-width: 48em) {
   .sidebar:before {
     background-size: cover !important;
+  }
+}
+
+.sidebar-nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+@media (max-width: 48em) {
+  .sidebar-nav {
+    flex-direction: row;
+  }
+}
+.chapter i {
+  min-width: 1.25em;
+  margin-right: 0.25em;
+  text-align: center;
+}
+section.copyright {
+  margin-top: 2em;
+}
+.content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+article.track a {
+  opacity: 0.1;
+}
+article.track a:hover {
+  opacity: 1;
+}
+.album footer {
+  margin-bottom: 2rem;
+}
+.album header em {
+  display: block;
+  margin-top: -0.6em;
+  margin-bottom: 1.5em;
+  font-size: 0.8em;
+}
+
+body > footer {
+  height: calc(100vh - 50px);
+  height: calc(100vh);
+}
+
+@media (max-width: 48em) {
+  .sidebar {
+    height: 240px;
+    display: flex;
+    align-items: center;
+  }
+  .sidebar-sticky {
+    overflow: hidden;
+    flex-basis: 90%;
+  }
+  .half-stuck {
+    width: 100%;
+    margin-top: -150px;
+    position: fixed;
+    z-index: 1;
+  }
+  .half-stuck + main {
+    padding-top: 260px;
+  }
+  footer.anchor {
+    padding-top: 100px;
+  }
+  aside, main, footer {
+    font-size: 24px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    margin-top: 1em;
+    font-size: 1.5em;
+  }
+  h3 {
+    margin-top: 1.5em;
+    font-size: 1.25em;
+  }
+  h4, h5, h6 {
+    margin-top: 1em;
+    font-size: 1em;
+  }
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  #contact {
+    line-height: 2;
+  }
+  .album .track {
+    line-height: 2;
+  }
+  .album .track a, .album header a {
+    opacity: 0.3;
+  }
+  .album .track a:hover, .album header a:hover {
+    opacity: 1;
+  }
+  .album .track a:before, .album footer a:before, .album header a:before {
+    transform: scale(2);
+    margin-left: 0.8em; margin-right: 0.6em;
   }
 }

@@ -5,11 +5,16 @@
 
   <body>
 
-    {% include sidebar.html %}
+    <aside id="sticky-sidebar" class="sidebar">
+      {% include sidebar.html %}
+    </aside>
 
-    <div class="content container">
-      {{ content }}
-    </div>
+    {{ content }}
+
+    <footer id="follow" class="content container anchor">
+      {% include footer.html %}
+    </footer>
 
   </body>
+
 </html>
