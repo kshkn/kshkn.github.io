@@ -34,7 +34,7 @@
 html {
   font-family: "Open Sans Condensed", "PT Sans", Helvetica, Arial, sans-serif;
 }
-@media (min-width: 48em) {
+@media (min-width: 800px) {
   html {
     font-size: 16px;
   }
@@ -55,7 +55,7 @@ html {
   color: rgba(255,255,255,.7);
   font-weight: lighter;
 }
-@media (min-width: 48em) {
+@media (min-width: 800px) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -103,7 +103,7 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 48em) {
+@media (min-width: 800px) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
@@ -124,7 +124,7 @@ a.sidebar-nav-item:focus {
   padding-bottom: 4rem;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 800px) {
   .content {
     max-width: 38rem;
     margin-left: 20rem;
@@ -139,7 +139,7 @@ a.sidebar-nav-item:focus {
  * Flip the orientation of the page by placing the `.sidebar` on the right.
  */
 
-@media (min-width: 48em) {
+@media (min-width: 800px) {
   .layout-reverse .sidebar {
     left: auto;
     right: 0;
@@ -316,12 +316,12 @@ h3 + p + p, h3 + p + ol + p {
   font-size: 0.8em;
   margin-bottom: 2rem;
 }
-@media (max-width: 48em) {
+@media (max-width: 799px) {
   .sidebar:before {
     background-size: 200% !important;
   }
 }
-@media (min-width: 48em) {
+@media (min-width: 800px) {
   .sidebar:before {
     background-size: cover !important;
   }
@@ -332,7 +332,7 @@ h3 + p + p, h3 + p + ol + p {
   justify-content: space-around;
   flex-direction: column;
 }
-@media (max-width: 48em) {
+@media (max-width: 799px) {
   .sidebar-nav {
     flex-direction: row;
   }
@@ -370,7 +370,7 @@ body > footer {
   height: calc(100vh);
 }
 
-@media (max-width: 48em) {
+@media (max-width: 799px) {
   .sidebar {
     height: 240px;
     display: flex;
