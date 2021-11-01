@@ -1,3 +1,15 @@
-<svg viewBox="0 0 500 500" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
-<path d="M 100.741 15.795 C 147.641 15.795 185.741 53.895 185.741 100.795 C 185.741 147.695 147.641 185.795 100.741 185.795 C 53.841 185.795 15.741 147.695 15.741 100.795 C 15.741 53.895 53.841 15.795 100.741 15.795 Z M 226.741 15.795 C 273.641 15.795 311.741 53.895 311.741 100.795 C 311.741 147.695 273.641 185.795 226.741 185.795 C 179.841 185.795 141.741 147.695 141.741 100.795 C 141.741 53.895 179.841 15.795 226.741 15.795 Z" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 10px;"/>
+<svg width="32" height="24" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with UXWing SVG Editor - https://uxwing.com/svg-icon-editor/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="26" width="34" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse stroke="#000000" fill-opacity="0" ry="11.163761" rx="11.163761" id="svg_1" cy="12.044761" cx="12.081101" fill="#ffffff"/>
+  <ellipse stroke="#000000" fill-opacity="0" ry="11.163761" rx="11.163761" id="svg_3" cy="12.044761" cx="19.878039" fill="#ffffff"/>
+ </g>
 </svg>
