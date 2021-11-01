@@ -257,9 +257,9 @@ h3 > code, h4 > code, h5 > code {
 a[href^="https://artists.landr.com/"]:before {
   content: "";
   display: inline-block;
-  height: 1rem; width: 1rem;
+  height: 1rem; width: 1.5rem;
   vertical-align: middle;
-  margin: -0.1rem 0.2rem 0 0.6rem;
+  margin: -0.1rem 0 0 0.6rem;
   background: url(/public/img/landr.svg) 0 0 no-repeat;
 }
 a[href^="https://open.spotify.com/"]:before {
