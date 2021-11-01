@@ -380,6 +380,9 @@ article.track a:hover {
   margin-bottom: 1.5em;
   font-size: 0.8em;
 }
+.album footer a {
+  white-space: nowrap;
+}
 
 body > footer {
   height: calc(100vh - 50px);
