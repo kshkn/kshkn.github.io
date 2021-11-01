@@ -1,4 +1,3 @@
-<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg"><title>Landr icon</title><g>
-<circle fill="none" stroke="#000" stroke-width="10" cx="100" cy="100" id="circle_left" r="85"/>
-<circle fill="none" stroke="#000" stroke-width="10" cx="150" cy="100" id="circle_right" r="85"/>
-</g></svg>
+<svg viewBox="0 0 500 500" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+<path d="M 100.741 15.795 C 147.641 15.795 185.741 53.895 185.741 100.795 C 185.741 147.695 147.641 185.795 100.741 185.795 C 53.841 185.795 15.741 147.695 15.741 100.795 C 15.741 53.895 53.841 15.795 100.741 15.795 Z M 226.741 15.795 C 273.641 15.795 311.741 53.895 311.741 100.795 C 311.741 147.695 273.641 185.795 226.741 185.795 C 179.841 185.795 141.741 147.695 141.741 100.795 C 141.741 53.895 179.841 15.795 226.741 15.795 Z" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 10px;"/>
+</svg>
