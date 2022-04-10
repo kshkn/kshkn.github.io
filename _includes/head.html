@@ -10,6 +10,10 @@
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:image" content="{{ site.url }}/public/img/{{ page.ogimage }}">
+  <!-- the following 3 lines are to redirect to https://koshkamoroshka.com/ -->
+  <meta http-equiv="refresh" content="0; url=https://koshkamoroshka.com/">
+  <script>window.location.href = "https://koshkamoroshka.com/"</script>
+  <link rel="canonical" href="https://koshkamoroshka.com/">
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{% if page.url == '/' %}{{ site.description }}{% else %}{{ page.description }}. {{ page.ogdescription }}{% endif %}">
   <meta name="keywords" content="{{ page.keywords | join: ', ' }}"/>
