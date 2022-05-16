@@ -107,7 +107,7 @@ a.sidebar-nav-item:focus {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
-    bottom: 1rem;
+    top: 1rem;
     left:   1rem;
   }
 }
@@ -242,14 +242,6 @@ h3 > code, h4 > code, h5 > code {
   font-weight: normal;
 }
 
-.sidebar:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient( rgba(0,0,0,0.1), rgba(0, 0, 0, 0.2) ), url(/public/img/bk2021-1280.jpg) 5% 5%;
-  background-color: transparent !important;
-}
 .sidebar-sticky {
   background-color: rgba(0,0,0,0.5);
 }
@@ -331,16 +323,6 @@ li a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
 h3 + p + p, h3 + p + ol + p {
   font-size: 0.8em;
   margin-bottom: 2rem;
-}
-@media (max-width: 799px) {
-  .sidebar:before {
-    background-size: 200% !important;
-  }
-}
-@media (min-width: 800px) {
-  .sidebar:before {
-    background-size: cover !important;
-  }
 }
 
 .sidebar-nav {
@@ -449,4 +431,9 @@ body > footer {
     transform: scale(2);
     margin-left: 0.8em; margin-right: 0.6em;
   }
+}
+
+.brand {
+  font-family: "novitonovathin", "Open Sans Condensed", "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
 }
