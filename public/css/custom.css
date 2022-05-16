@@ -157,7 +157,7 @@ nav.repertoire-nav a, nav.main-nav a {
   margin-right: 0.3rem;
 }
 
-.albums {
+.albums, .singles {
   display: flex;
   flex-direction: column;
 }
@@ -178,6 +178,9 @@ nav.repertoire-nav a, nav.main-nav a {
   margin-top: -0.6em;
   margin-bottom: 1em;
   font-size: 0.8em;
+}
+.singles .album header em {
+  margin-bottom: 0;
 }
 .album footer a {
   white-space: nowrap;
