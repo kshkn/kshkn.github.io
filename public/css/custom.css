@@ -9,7 +9,6 @@
     background-color: #303030!important;
 }
 .navbar .container {
-    max-width: 38rem;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -140,5 +139,123 @@ nav.repertoire-nav a, nav.main-nav a {
   .sidebar:before {
     background-size: 350% !important;
     background-position: 5% 40% !important;
+  }
+}
+
+.tracks {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+.tracks > .track {
+  display: flex;
+  line-height: 1.75rem;
+}
+.tracks > .track .title {
+  min-width: 120px;
+}
+.tracks > .track .providers a {
+  margin-right: 0.3rem;
+}
+
+.albums {
+  display: flex;
+  flex-direction: column;
+}
+.album {
+  display: inline-flex;
+  Rwidth: min-content;
+  flex-direction: column;
+}
+.album > footer a {
+  margin-right: 0.6rem;
+}
+.album > footer {
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+.album header em {
+  display: block;
+  margin-top: -0.6em;
+  margin-bottom: 1em;
+  font-size: 0.8em;
+}
+.album footer a {
+  white-space: nowrap;
+}
+
+@media (max-width: 799px) {
+  .sidebar {
+    height: 240px;
+    display: flex;
+    align-items: center;
+  }
+  .sidebar-sticky {
+    overflow: hidden;
+    flex-basis: 90%;
+  }
+  .half-stuck {
+    width: 100%;
+    margin-top: -150px;
+    position: fixed;
+    z-index: 1;
+  }
+  .half-stuck + main {
+    padding-top: 260px;
+  }
+  footer.anchor {
+    padding-top: 100px;
+  }
+  aside, main, footer {
+    font-size: 24px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    margin-top: 1em;
+    font-size: 1.5em;
+  }
+  h3 {
+    margin-top: 1.5em;
+    font-size: 1.25em;
+  }
+  h4, h5, h6 {
+    margin-top: 1em;
+    font-size: 1em;
+  }
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  #contact {
+    line-height: 2;
+  }
+  .album .tracks {
+    margin-bottom: 1rem;
+  }
+  .album header h3 a {
+    margin-left: 1em;
+  }
+  .album .track {
+    line-height: 2;
+  }
+  .album .track a, .album header a {
+    opacity: 0.3;
+  }
+  .album .track a:hover, .album header a:hover {
+    opacity: 1;
+  }
+  .album .track a:before, .album footer a:before, .album header a:before {
+    transform: scale(2);
+    margin-right: 0.7em;
+  }
+  .album > footer {
+    margin-left: 0.7rem;
+  }
+  .album > footer a {
+    margin-right: 2rem;
+  }
+  .tracks > .track .title {
+    min-width: 220px;
   }
 }

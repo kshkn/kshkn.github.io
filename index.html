@@ -27,10 +27,14 @@ order: 1
       <ol class="tracks">
         {% for track in album.tracks -%}
         <li class="track">
-          {{ track.title }} <code>{{ track.length }}</code>
+          <span class="title">
+          {{ track.title }}
+          </span>
+          <span class="providers">
           {% for tags in track.links -%}
             <a href="{{ tags[1] }}" target="_blank"></a>
           {% endfor -%}
+          </span>
         </li>
         {% endfor %}
       </ol>
@@ -54,7 +58,7 @@ order: 1
   {% for single in site.data.singles %}
     <article class="album">
       <header>
-      <h3> {{ single.title }} <code>{{ single.length }}</code> <a href="{{ single.links.GitHub }}" target="_blank"></a> </h3>
+      <h3> {{ single.title }} <a href="{{ single.links.GitHub }}" target="_blank"></a> </h3>
       <em> {{ single.date | date: "%-d %B %Y" }} </em>
       </header>
 

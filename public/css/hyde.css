@@ -126,7 +126,6 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 800px) {
   .content {
-    max-width: 38rem;
     margin-left: 20rem;
     margin-right: 2rem;
   }
@@ -251,7 +250,7 @@ a[href^="https://music.yandex.ru/"]:before {
   display: inline-block;
   height: 1rem; width: 1rem;
   vertical-align: middle;
-  margin: -0.1rem 0.2rem 0 0.6rem;
+  margin: -0.1rem 0.2rem 0 0;
   background: url(/public/img/yandex-music.svg) 0 0 no-repeat;
 }
 a[href^="https://artists.landr.com/"]:before {
@@ -259,7 +258,7 @@ a[href^="https://artists.landr.com/"]:before {
   display: inline-block;
   height: 1rem; width: 1.5rem;
   vertical-align: middle;
-  margin: -0.1rem 0 0 0.6rem;
+  margin: -0.1rem 0 0 0;
   background: url(/public/img/landr.svg) 0 0 no-repeat;
 }
 a[href^="https://open.spotify.com/"]:before {
@@ -267,7 +266,7 @@ a[href^="https://open.spotify.com/"]:before {
   display: inline-block;
   height: 1rem; width: 1rem;
   vertical-align: middle;
-  margin: -0.1rem 0.2rem 0 0.6rem;
+  margin: -0.1rem 0.2rem 0 0;
   background: url(/public/img/spotify.svg) 0 0 no-repeat;
 }
 a[href^="https://play.google.com/"]:before {
@@ -275,7 +274,7 @@ a[href^="https://play.google.com/"]:before {
   display: inline-block;
   height: 1rem; width: 1rem;
   vertical-align: middle;
-  margin: -0.1rem 0.2rem 0 0.6rem;
+  margin: -0.1rem 0.2rem 0 0;
   background: url(/public/img/googleplay.svg) 0 0 no-repeat;
 }
 a[href^="https://music.apple.com/"]:before {
@@ -283,7 +282,7 @@ a[href^="https://music.apple.com/"]:before {
   display: inline-block;
   height: 1rem; width: 1rem;
   vertical-align: middle;
-  margin: -0.3rem 0.1rem 0 0.6rem;
+  margin: -0.3rem 0.1rem 0 0;
   background: url(/public/img/apple.svg) 0 0 no-repeat;
 }
 a[href^="https://www.youtube.com/"]:before {
@@ -291,7 +290,7 @@ a[href^="https://www.youtube.com/"]:before {
   display: inline-block;
   height: 1rem; width: 1rem;
   vertical-align: middle;
-  margin: -0.1rem 0.2rem 0 0.6rem;
+  margin: -0.1rem 0.2rem 0 0;
   background: url(/public/img/youtube.svg) 0 0 no-repeat;
 }
 a[href^="https://music.youtube.com/"]:before {
@@ -299,7 +298,7 @@ a[href^="https://music.youtube.com/"]:before {
   display: inline-block;
   height: 1rem; width: 1rem;
   vertical-align: middle;
-  margin: -0.1rem 0.2rem 0 0.6rem;
+  margin: -0.1rem 0.2rem 0 0;
   background: url(/public/img/youtube-music.svg) 0 0 no-repeat;
 }
 a[href^="https://github.com/"][href$=".md"]:before {
@@ -307,7 +306,7 @@ a[href^="https://github.com/"][href$=".md"]:before {
   display: inline-block;
   height: 1rem; width: 1rem;
   vertical-align: middle;
-  margin: -0.1rem 0.2rem 0 0.6rem;
+  margin: -0.1rem 0.2rem 0 0;
   background: url(/public/img/github.svg) 0 0 no-repeat;
 }
 
@@ -353,84 +352,10 @@ article.track a {
 article.track a:hover {
   opacity: 1;
 }
-.album footer {
-  margin-bottom: 2rem;
-}
-.album header em {
-  display: block;
-  margin-top: -0.6em;
-  margin-bottom: 1.5em;
-  font-size: 0.8em;
-}
-.album footer a {
-  white-space: nowrap;
-}
 
 body > footer {
   height: calc(100vh - 50px);
   height: calc(100vh);
-}
-
-@media (max-width: 799px) {
-  .sidebar {
-    height: 240px;
-    display: flex;
-    align-items: center;
-  }
-  .sidebar-sticky {
-    overflow: hidden;
-    flex-basis: 90%;
-  }
-  .half-stuck {
-    width: 100%;
-    margin-top: -150px;
-    position: fixed;
-    z-index: 1;
-  }
-  .half-stuck + main {
-    padding-top: 260px;
-  }
-  footer.anchor {
-    padding-top: 100px;
-  }
-  aside, main, footer {
-    font-size: 24px;
-  }
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    margin-top: 1em;
-    font-size: 1.5em;
-  }
-  h3 {
-    margin-top: 1.5em;
-    font-size: 1.25em;
-  }
-  h4, h5, h6 {
-    margin-top: 1em;
-    font-size: 1em;
-  }
-  .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  #contact {
-    line-height: 2;
-  }
-  .album .track {
-    line-height: 2;
-  }
-  .album .track a, .album header a {
-    opacity: 0.3;
-  }
-  .album .track a:hover, .album header a:hover {
-    opacity: 1;
-  }
-  .album .track a:before, .album footer a:before, .album header a:before {
-    transform: scale(2);
-    margin-left: 0.8em; margin-right: 0.6em;
-  }
 }
 
 .brand {
