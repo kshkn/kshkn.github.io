@@ -143,8 +143,9 @@ nav.repertoire-nav a, nav.main-nav a {
 }
 
 .tracks {
-  padding-left: 1rem;
-  margin-bottom: 0;
+  padding-left: 0;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 .tracks > .track {
   display: flex;
@@ -154,7 +155,7 @@ nav.repertoire-nav a, nav.main-nav a {
   min-width: 120px;
 }
 .tracks > .track .providers a {
-  margin-right: 0.3rem;
+  margin-right: 0.5rem;
 }
 
 .albums, .singles {
@@ -171,16 +172,12 @@ nav.repertoire-nav a, nav.main-nav a {
 }
 .album > footer {
   line-height: 3rem;
-  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 .album header em {
   display: block;
   margin-top: -0.6em;
-  margin-bottom: 1em;
   font-size: 0.8em;
-}
-.singles .album header em {
-  margin-bottom: 0;
 }
 .album footer a {
   white-space: nowrap;
@@ -239,6 +236,9 @@ nav.repertoire-nav a, nav.main-nav a {
   .album header h3 a {
     margin-left: 1em;
   }
+  .tracks {
+    margin-left: 0;
+  }
   .album .track {
     line-height: 2;
   }
@@ -254,6 +254,8 @@ nav.repertoire-nav a, nav.main-nav a {
   }
   .album > footer {
     margin-left: 0.7rem;
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
   }
   .album > footer a {
     margin-right: 2rem;

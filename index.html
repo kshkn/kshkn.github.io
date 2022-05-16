@@ -23,6 +23,11 @@ order: 1
       <h3> {{ album.title }} </h3>
       <em> {{ album.date | date: "%-d %B %Y" }} </em>
       </header>
+      <footer>
+      {% for tags in album.links -%}
+      <a href="{{ tags[1] }}" target="_blank">{{ tags[0] }}</a>
+      {% endfor -%}
+      </footer>
 
       <ol class="tracks">
         {% for track in album.tracks -%}
@@ -39,11 +44,6 @@ order: 1
         {% endfor %}
       </ol>
 
-      <footer>
-      {% for tags in album.links -%}
-      <a href="{{ tags[1] }}" target="_blank">{{ tags[0] }}</a>
-      {% endfor -%}
-      </footer>
     </article>
 
   {% endfor %}
