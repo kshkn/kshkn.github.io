@@ -322,7 +322,7 @@ a[href^="https://github.com/"][href$=".md"]:before {
 p a:first-child:before {
   margin-left: 0;
 }
-li a, h3 a, h4 a, h5 a {
+main li a, main h3 a, main h4 a, main h5 a {
   opacity: 0.1;
 }
 li a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
