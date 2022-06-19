@@ -310,8 +310,8 @@ nav.repertoire-nav a, nav.main-nav a {
     position: fixed;
     z-index: 1;
   }
-  .half-stuck + main {
-    padding-top: 260px;
+  .half-stuck + nav + main {
+    padding-top: 274px;
   }
   footer.anchor {
     padding-top: 100px;
