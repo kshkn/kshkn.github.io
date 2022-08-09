@@ -1,5 +1,43 @@
 {% include contact.html %}
 
 <section class="copyright">
-<p>&copy; {{ site.time | date: '%Y' }} All rights reserved</p>
+<p>&copy; {{ site.time | date: '%Y' }} <span lang="en">All rights reserved</span></p>
 </section>
+
+<script>
+  const userLocale = navigator.languages && navigator.languages.length ? navigator.languages[0] : navigator.language;
+  const userLanguage = userLocale.split('-')[0];
+
+  var translations = { "ru": {
+    "Julia Koshkina": "Юля Кошкина",
+    "Siberian singer and songwriter": "Певица и автор песен",
+    "Discography": "Дискография",
+    "Follow": "Соцсети",
+    "Live": "Стрим",
+    "Archive": "Архив",
+    "Singles": "Синглы",
+    "Follow my work": "Мой контент",
+    "Stay updated": "Анонсы и новости",
+    "Contact me": "Деловая связь",
+    "Join my community": "Моё сообщество",
+    "All rights reserved": "Все права защищены",
+  } };
+
+  if (userLanguage != 'en') {
+    var elements = document.querySelectorAll('[lang=en]');
+    [...elements].forEach((element) => {
+      let child = element.firstChild;
+      while (child) {
+        if (child.nodeType == Node.TEXT_NODE) {
+          let text = child.textContent.trim();
+          if (translations[userLanguage][text]) {
+            child.textContent = translations[userLanguage][text];
+          }else{
+            console.log(userLanguage, ':', text);
+          }
+        }
+        child = child.nextSiblind;
+      }
+    });
+  }
+</script>
