@@ -31,7 +31,7 @@
       while (child) {
         if (child.nodeType == Node.TEXT_NODE) {
           let text = child.textContent.trim();
-          if (translations[userLanguage][text]) {
+          if (translations[userLanguage] && translations[userLanguage][text]) {
             child.textContent = translations[userLanguage][text];
           }else{
             console.log(userLanguage, ':', text);
