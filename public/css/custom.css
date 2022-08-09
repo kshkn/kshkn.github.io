@@ -396,6 +396,7 @@ a.nav-item:hover, a.nav-item:focus {
 main header {
   padding-top: 1rem;
 }
+
 @media (max-width: 799px) {
   .nav-items {
     column-count: 2;
@@ -406,5 +407,12 @@ main header {
   }
   .tracks > .track .title {
     min-width: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .navbar-brand {
+    display: block;
+    margin-top: 2rem;
   }
 }
