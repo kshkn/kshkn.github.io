@@ -51,7 +51,7 @@ html {
   overflow: hidden;
   position: relative;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2rem 0.5rem 1rem 0;
   color: rgba(255,255,255,.7);
   font-weight: lighter;
 }
@@ -69,32 +69,6 @@ html {
 /* Sidebar links */
 .sidebar a {
   color: #fff;
-}
-
-/* About section */
-.sidebar-about h1 {
-  color: #fff;
-  margin-top: 0;
-  font-family: "novitonovathin", "Open Sans Condensed", "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: 4rem;
-  font-weight: lighter;
-  text-transform: uppercase;
-}
-
-/* Sidebar nav */
-.sidebar-nav {
-  margin-bottom: 1rem;
-}
-.sidebar-nav-item {
-  display: block;
-  line-height: 1.75;
-}
-a.sidebar-nav-item:hover,
-a.sidebar-nav-item:focus {
-  text-decoration: underline;
-}
-.sidebar-nav-item.active {
-  font-weight: bold;
 }
 
 /* Sticky sidebar
@@ -308,6 +282,18 @@ a[href^="https://github.com/"][href$=".md"]:before {
   vertical-align: middle;
   margin: -0.1rem 0.2rem 0 0;
   background: url(/public/img/github.svg) 0 0 no-repeat;
+}
+
+a[href^="https://boosty.to/"]:before {
+  content: "";
+  display: inline-block;
+  height: 1rem; width: 1rem;
+  vertical-align: middle;
+  margin: -0.1rem 0.2rem 0 0;
+  margin-left: -1.5em;
+  padding-right: 0.25em;
+  background: url(/public/img/boosty.svg) 0 0 no-repeat;
+  opacity: 0.75;
 }
 
 p a:first-child:before {

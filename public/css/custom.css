@@ -25,20 +25,11 @@
     text-align: left;
     background-color: #222;
 }
-.navbar-dark .navbar-brand {
-    color: #fff;
-}
 
 nav.repertoire-nav a, nav.main-nav a {
     text-transform: lowercase;
 }
 .navbar-brand {
-    display: inline-block;
-    padding-top: 0.324219rem;
-    padding-bottom: 0.324219rem;
-    margin-right: 1rem;
-    font-size: 1.171875rem;
-    line-height: inherit;
     white-space: nowrap;
 }
 .navbar-brand img {
@@ -237,7 +228,7 @@ nav.repertoire-nav a, nav.main-nav a {
   position: absolute;
   z-index: -1;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient( rgba(0,0,0,0.1), rgba(0, 0, 0, 0.2) ), url(/public/img/bk2022-1280a.jpg) 0% 0%;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) ), url(/public/img/bk2022-1280a.jpg) 0% 0%;
   background-color: transparent !important;
 }
 @media (max-width: 799px) {
@@ -295,11 +286,6 @@ nav.repertoire-nav a, nav.main-nav a {
 }
 
 @media (max-width: 799px) {
-  .sidebar {
-    height: 240px;
-    display: flex;
-    align-items: center;
-  }
   .sidebar-sticky {
     overflow: hidden;
     flex-basis: 90%;
@@ -371,7 +357,54 @@ nav.repertoire-nav a, nav.main-nav a {
   .album > footer a {
     margin-right: 2rem;
   }
+}
+
+/* Sidebar nav */
+.nav-items {
+  font-size: 1.5rem;
+  line-height: 1.75;
+  margin: 0; padding: 0;
+}
+.nav-items li {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.nav-item {
+  display: block;
+}
+a.nav-item:hover, a.nav-item:focus {
+  text-decoration: underline;
+}
+
+.sidebar h1 {
+  color: #fff;
+  margin-top: 0;
+  font-family: "novitonovathin", "Open Sans Condensed", "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.flex-center {
+}
+
+main header {
+  padding-top: 1rem;
+}
+@media (max-width: 799px) {
+  .nav-items {
+    column-count: 2;
+  }
+  li.track {
+    display: flex;
+    justify-content: space-between;
+  }
   .tracks > .track .title {
-    min-width: 220px;
+    min-width: none;
   }
 }
