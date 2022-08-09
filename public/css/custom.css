@@ -31,6 +31,7 @@ nav.repertoire-nav a, nav.main-nav a {
 }
 .navbar-brand {
     white-space: nowrap;
+    color: #fff;
 }
 .navbar-brand img {
     height: 1.4em;
