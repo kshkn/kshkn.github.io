@@ -385,6 +385,9 @@ a.nav-item:hover, a.nav-item:focus {
   font-weight: lighter;
   text-transform: uppercase;
 }
+h1 a:hover, h1 a:focus {
+  text-decoration: none;
+}
 
 .sidebar {
   display: flex;
